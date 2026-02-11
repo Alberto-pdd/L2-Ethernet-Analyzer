@@ -1,86 +1,132 @@
 # =================================================================
 # PREREQUISITOS Y DEPENDENCIAS
 # =================================================================
-*.d                # Archivos de dependencia generados por GCC/G++ para rastrear cabeceras.
+# Archivos de dependencia generados por GCC/G++ para rastrear cabeceras.
+*.d
 
 # =================================================================
 # Identificación Académica
 # =================================================================
-AUTORES.txt        # Datos personales para la entrega en AVUEx (no se suben al portafolio).
+# Datos personales para la entrega en AVUEx (no se suben al portafolio).
+AUTORES.txt
 
 # =================================================================
 # ARCHIVOS OBJETO (INTERMEDIARIOS DE COMPILACIÓN)
 # =================================================================
-*.o                # Objeto compilado en Unix/Linux/macOS (binario intermedio).
-*.ko               # Objetos del kernel; no se versionan binarios de bajo nivel.
-*.obj              # Equivalente a .o en entornos Windows.
-*.elf              # Formato ejecutable binario; se debe generar localmente.
+# Objeto compilado en Unix/Linux/macOS (binario intermedio).
+*.o
+# Objetos del kernel; no se versionan binarios de bajo nivel.
+*.ko
+# Equivalente a .o en entornos Windows.
+*.obj
+# Formato ejecutable binario; se debe generar localmente.
+*.elf
 
 # =================================================================
 # SALIDA DEL LINKER Y LIBRERÍAS
 # =================================================================
-*.ilk              # Enlace incremental de MSVC; archivo temporal de build.
-*.map              # Mapa de memoria del linker; información de depuración local.
-*.exp              # Archivos de exportación de librerías en Windows.
-*.lib              # Librería estática de Windows.
-*.a                # Librería estática Unix (ej. LinkLayer.a); se genera en el build[cite: 386].
-!LinkLayer.a       # Excepción: Librería del curso necesaria para compilar.
-*.la               # Metadatos de librerías libtool.
-*.lo               # Objeto de librería libtool.
+# Enlace incremental de MSVC; archivo temporal de build.
+*.ilk
+# Mapa de memoria del linker; información de depuración local.
+*.map
+# Archivos de exportación de librerías en Windows.
+*.exp
+# Librería estática de Windows.
+*.lib
+# Librería estática Unix (ej. LinkLayer.a); se genera en el build[cite: 386].
+*.a
+# Excepción: Librería del curso necesaria para compilar.
+!LinkLayer.a
+# Metadatos de librerías libtool.
+*.la
+# Objeto de librería libtool.
+*.lo
 
 # =================================================================
 # LIBRERÍAS COMPARTIDAS / DINÁMICAS
 # =================================================================
-*.dll              # Binarios dinámicos de Windows.
-*.so               # Shared Objects de Linux; dependen del entorno de ejecución.
-*.so.* # Versiones específicas de librerías compartidas.
-*.dylib            # Librerías dinámicas de macOS.
+# Binarios dinámicos de Windows.
+*.dll
+# Shared Objects de Linux; dependen del entorno de ejecución.
+*.so
+# Versiones específicas de librerías compartidas.
+*.so.*
+# Librerías dinámicas de macOS.
+*.dylib
 
 # =================================================================
 # EJECUTABLES Y BINARIOS RESULTANTES
 # =================================================================
-*.exe              # Ejecutable final de Windows.
-*.out              # Salida por defecto de compiladores Unix (a.out).
-*.app              # Paquetes de aplicación de macOS.
-Sesion[0-9]* # Binarios específicos de las prácticas (ej. Sesion1)[cite: 541].
-*.i*86             # Ejecutables para arquitectura x86.
-*.x86_64           # Ejecutables para arquitectura 64 bits.
-*.hex              # Archivos en formato hexadecimal.
+# Ejecutable final de Windows.
+*.exe
+# Salida por defecto de compiladores Unix (a.out).
+*.out
+# Paquetes de aplicación de macOS.
+*.app
+# Binarios específicos de las prácticas (ej. Sesion1)[cite: 541].
+Sesion[0-9]*
+# Ejecutables para arquitectura x86.
+*.i*86
+# Ejecutables para arquitectura 64 bits.
+*.x86_64
+# Archivos en formato hexadecimal.
+*.hex
 
 # =================================================================
 # ARCHIVOS DE DEBUGGING (DEPURACIÓN)
 # =================================================================
-*.dSYM/            # Directorio de símbolos de depuración en macOS.
-*.su               # Estadísticas de uso de pila generadas por GCC.
-*.idb              # Base de datos de compilación incremental (MSVC).
-*.pdb              # Símbolos de depuración de Microsoft.
+# Directorio de símbolos de depuración en macOS.
+*.dSYM/
+# Estadísticas de uso de pila generadas por GCC.
+*.su
+# Base de datos de compilación incremental (MSVC).
+*.idb
+# Símbolos de depuración de Microsoft.
+*.pdb
 
 # =================================================================
 # DIRECTORIOS Y ARCHIVOS DE BUILD (CONSTRUCCIÓN)
 # =================================================================
-build/             # Carpeta estándar de compilación fuera del árbol fuente.
-bin/               # Carpeta de destino para binarios finales.
-obj/               # Carpeta para objetos intermedios.
-CMakeCache.txt     # Caché de configuración local de CMake.
-CMakeFiles/        # Archivos temporales de procesos de CMake.
-cmake_install.cmake # Scripts de instalación generados localmente.
-Makefile           # Makefile generado (no manual). Si lo creas a mano, quítalo de aquí.
-*.cmake            # Scripts de configuración de build generados.
-compile_commands.json # Base de datos de compilación para herramientas de autocompletado.
+# Carpeta estándar de compilación fuera del árbol fuente.
+build/
+# Carpeta de destino para binarios finales.
+bin/
+# Carpeta para objetos intermedios.
+obj/
+# Caché de configuración local de CMake.
+CMakeCache.txt
+# Archivos temporales de procesos de CMake.
+CMakeFiles/
+# Scripts de instalación generados localmente.
+cmake_install.cmake
+# Makefile generado (no manual). Si lo creas a mano, quítalo de aquí.
+Makefile
+# Scripts de configuración de build generados.
+*.cmake
+# Base de datos de compilación para herramientas de autocompletado.
+compile_commands.json
 
 # =================================================================
 # CONFIGURACIÓN DE RED Y SISTEMA (ESPECÍFICO DEL PROYECTO)
 # =================================================================
-glibc-*/           # Fuentes de glibc; archivos pesados de sistema (Sección 7.5)[cite: 362, 369].
-*.tar.xz           # Paquetes comprimidos de librerías descargadas[cite: 367].
-*.pcap             # Capturas de red de Wireshark; contienen datos, no código[cite: 379].
-*.pcapng           # Capturas de red de nueva generación.
+# Fuentes de glibc; archivos pesados de sistema (Sección 7.5)[cite: 362, 369].
+glibc-*/
+# Paquetes comprimidos de librerías descargadas[cite: 367].
+*.tar.xz
+# Capturas de red de Wireshark; contienen datos, no código[cite: 379].
+*.pcap
+# Capturas de red de nueva generación.
+*.pcapng
 
 # =================================================================
 # CONFIGURACIÓN DE IDES Y EDITORES
 # =================================================================
 # .vscode/         # NOTA: Comentado porque la entrega exige incluir esta carpeta.
-.idea/             # Configuración local de JetBrains.
-*.swp              # Archivos de intercambio de Vim.
-*~                 # Respaldos temporales de editores de texto.
-*.DS_Store         # Archivos de metadatos de sistema en macOS.
+# Configuración local de JetBrains.
+.idea/
+# Archivos de intercambio de Vim.
+*.swp
+# Respaldos temporales de editores de texto.
+*~
+# Archivos de metadatos de sistema en macOS.
+*.DS_Store
