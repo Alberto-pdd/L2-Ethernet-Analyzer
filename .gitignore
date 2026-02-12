@@ -65,6 +65,8 @@ AUTORES.txt
 *.app
 # Binarios específicos de las prácticas (ej. Sesion1)[cite: 541].
 Sesion[0-9]*
+# Ignora el ejecutable, pero permite el código fuente
+!Sesion[0-9]*.cpp
 # Ejecutables para arquitectura x86.
 *.i*86
 # Ejecutables para arquitectura 64 bits.
