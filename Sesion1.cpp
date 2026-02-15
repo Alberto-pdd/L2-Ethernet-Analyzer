@@ -9,9 +9,6 @@
 #include <iostream>
 #include "linkLayer.h"
 
-
-
-
 using namespace std;
 
 
@@ -26,7 +23,7 @@ int main()
     
  avail_ifaces=GetAvailAdapters(); 
 
- setDeviceName(&iface, "lo");
+ //setDeviceName(&iface, "lo");
  GetMACAdapter(&iface);
  PrintMACAdapter(&iface); 
 
